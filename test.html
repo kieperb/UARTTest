@@ -3,6 +3,8 @@
  </head>
  <body>
   <script src="https://www.espruino.com/js/uart.js"></script>
+  Espruino Simple Test
+  <br>
   <button onclick="UART.write('digitalWrite(C7,1);\n');">GREEN On!</button>
   <button onclick="UART.write('digitalWrite(C7,0);\n');">GREEN Off!</button>
   <br>
@@ -11,10 +13,6 @@
   <br>
    <button onclick="UART.write('digitalWrite(C8,1);\n');">RED On!</button>
   <button onclick="UART.write('digitalWrite(C8,0);\n');">RED Off!</button>
-  
-  <br>
-   <button onclick="UART.write([0xF5,13,1]);">13 On!</button>
-   <button onclick="UART.write([0xF5,13,1]);">13 Off!</button>
-    
+        
  </body>
 </html>
