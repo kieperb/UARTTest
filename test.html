@@ -13,8 +13,8 @@
   <button onclick="UART.write('digitalWrite(C8,0);\n');">RED Off!</button>
   
   <br>
-   <button onclick="UART.write(0xF5); UART.write(13); UART.write(1);">13 On!</button>
-   <button onclick="UART.write(0xF5); UART.write(13); UART.write(1);">13 Off!</button>
+   <button onclick="UART.write([0xF5,13,1]);">13 On!</button>
+   <button onclick="UART.write([0xF5,13,1]);">13 Off!</button>
     
  </body>
 </html>
