@@ -2,8 +2,10 @@
  <head>
  </head>
  <body>
+   <button type="button">Connect Serial Device</button>
   <script src="https://www.espruino.com/js/uart.js"></script>
   <h2>Espruino Simple Test</h2>
+  <!--
   <br>
   <button onclick="UART.write('digitalWrite(C7,1);\n');">GREEN On!</button>
   <button onclick="UART.write('digitalWrite(C7,0);\n');">GREEN Off!</button>
@@ -13,6 +15,22 @@
   <br>
    <button onclick="UART.write('digitalWrite(C8,1);\n');">RED On!</button>
   <button onclick="UART.write('digitalWrite(C8,0);\n');">RED Off!</button>
+   -->
+  <script>
+      document.querySelector('button').addEventListener('click', async () => {
         
+       
+       UART.write(' import board\n');
+       UART.write('import neopixel\n');
+       UART.write('pixels = neopixel.NeoPixel(board.NEOPIXEL, 4)\n');
+       UART.write('pixels.fill((255, 0, 0))\n');
+        
+        //await writer.write(' import board♪');
+        //await writer.write('import neopixel♪');
+        //await writer.write('pixels = neopixel.NeoPixel(board.NEOPIXEL, 4)♪');
+        //await writer.write('pixels.fill((255, 0, 0))♪');
+      });     
+    </script>
+  
  </body>
 </html>
